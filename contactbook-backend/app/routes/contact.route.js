@@ -2,16 +2,16 @@ const express = require("express");
 const contacts = require("../controllers/contact.controller")
 const router = express.Router();
 router.route("/")
-    .get(contacts.findA11)
+    .get(contacts.findAll)
     .post(contacts.create)
     .delete(contacts.deleteAll);
 
 router.route("/favorite")
-    .get(contacts.findAlLFavorite);
+    .get(contacts.findAllFavorite);
 
 router.route("/:id")
-    .get(contacts.findone)
+    .get(contacts.findOne)
     .put(contacts.update)
     .delete(contacts.delete);
 
-module. exports = router;
+module.exports = router;
